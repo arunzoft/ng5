@@ -1,0 +1,29 @@
+<div class="container color-dark">
+  <!-- <div class="col">
+    <p>Add a list </p>
+  </div> -->
+  <!-- <div class="col">
+    <p>your list {{listCount}}</p>
+  </div> -->
+</div>
+<div class="container color-light" >
+  <div class="col">
+    <p class="sm">question ?</p>
+    <form>
+      <input type="text" name="item" placeholder="placeholder" class="txt" [(ngModel)]="goalText">
+      <!-- <br>
+      <br> 
+      <span>{{ goalText }}</span> -->
+      <br>
+      <br>
+      <input type="submit" [value]="btnValue" class="btn" (click)="addItem()">
+    </form>
+  </div>
+  <div class="col">
+      <p><b>your list {{listCount}} </b></p>
+    <p class="life-container" *ngFor="let gol of goals; let i=index" (click)="removeItem(i)">
+      {{gol}}
+    </p>
+  </div>
+ 
+</div>
